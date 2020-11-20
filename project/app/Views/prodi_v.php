@@ -3,6 +3,7 @@
             <h2>Program Studi</h2>
 
             <?php if(!empty($session)) { ?>
+
                 <div class="alert alert-<?php echo $session['status'] ? 'success' : 'danger'; ?> alert-dismissible fade show" role="alert">
                     <?php echo $session['message']; ?>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -23,7 +24,11 @@
                     </a>
                 </p>
 
-            <?php } ?>
+            <?php 
+        
+                } 
+                
+            ?>
             
             <table class="table table-striped table-bordered">
                 <thead class="thead-light">
@@ -61,6 +66,7 @@
                         <?php
                             }
                         ?>
+
                         <td><?php echo $row->kode_prodi; ?></td>
                         <td><?php echo $row->nama_prodi; ?></td>
                         <td><?php echo $row->ketua_program_studi; ?></td>
@@ -76,7 +82,9 @@
                         <td colspan="4" class="text-center">Tidak Ada Data.</td>
                     </tr>
 
-                    <?php } ?>
+                    <?php 
+                        } 
+                    ?>
                     
                 </tbody>
 

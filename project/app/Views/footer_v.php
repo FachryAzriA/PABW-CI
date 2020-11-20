@@ -26,5 +26,12 @@
             </div>
         </div>
 
+        <!-- Javascript Tables-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.22/b-1.6.5/b-colvis-1.6.5/b-html5-1.6.5/b-print-1.6.5/cr-1.5.2/datatables.min.js"></script>
+
+        <!-- Custom JS -->
+        <script type="text/javascript" href="<?php echo base_url('assets/js/main.js') ?>"></script>
     </body>
 </html>

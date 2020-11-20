@@ -14,6 +14,7 @@ class Agama extends BaseController {
 
     public function index() {
         $data['session'] = $this->session->getFlashdata('response');
+        $data['isLogin'] = $this->session->get('username');
         $data['dataAgama'] = $this->agama->findAll();
 
         echo view('header_v');

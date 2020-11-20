@@ -22,6 +22,7 @@ class Mahasiswa extends BaseController {
 
     public function index() {
         $data['session'] = $this->session->getFlashdata('response');
+        $data['isLogin'] = $this->session->get('username');
         $data['dataMahasiswa'] = $this->mahasiswa->get($this->db)->getResult();
 
         echo view('header_v');

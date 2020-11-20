@@ -15,6 +15,7 @@ class Hobi extends BaseController {
 
     public function index() {
         $data['session'] = $this->session->getFlashdata('response');
+        $data['isLogin'] = $this->session->get('username');
         $data['dataHobi'] = $this->hobi->get()->getResult();
 
         echo view('header_v');

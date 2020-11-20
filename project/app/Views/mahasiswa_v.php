@@ -4,35 +4,43 @@
 
             <?php if(!empty($session)) { ?>
 
-            <div class="alert alert-<?php echo $session['status'] ? 'success' : 'danger'; ?> alert-dismissible fade show" role="alert">
-                <?php echo $session['message']; ?>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+                <div class="alert alert-<?php echo $session['status'] ? 'success' : 'danger'; ?> alert-dismissible fade show" role="alert">
+                    <?php echo $session['message']; ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
 
             <?php }
 
                 if(!empty($isLogin))
-                {
+                { 
 
             ?>
 
-            <p>
-                <a href="<?php echo site_url('Mahasiswa/add');?>" class="btn btn-primary btn-sm">
-                <i class="fa fa-plus"></i>Tambah
-                </a>
-            </p>
+                <p>
+                    <a href="<?php echo site_url('Mahasiswa/add');?>" class="btn btn-primary btn-sm">
+                    <i class="fa fa-plus"></i>Tambah
+                    </a>
+                </p>
 
-            <?php } ?>
+            <?php 
+        
+                } 
+                
+            ?>
 
-            <table class="table table-striped table-bordered">
+            <table class="table table-striped table-bordered" id="cancel">
                 <thead class="thead-light">
                     <tr>
-
-                        <?php if (!empty($isLogin)) { ?>
+                        
+                        <?php 
+                            if (!empty($isLogin)) { 
+                        ?>
                             <th> Aksi </th>
-                        <?php } ?>
+                        <?php 
+                            } 
+                        ?>
                         
                         <th> Nama Mahasiswa </th>
                         <th> Nomor Induk Mahasiswa </th>
@@ -46,7 +54,10 @@
                     <?php foreach ($dataMahasiswa as $row) : ?> 
 
                     <tr>
-                        <?php if (!empty($isLogin)) { ?>
+                        <?php 
+                            if (!empty($isLogin)) { 
+                        ?>
+
                         <th>
                             <a href="<?php echo site_url('Mahasiswa/edit/'.$row->nim); ?>" class="btn btn-warning btn-sm">
                                 <i class="fa fa-pencil"></i>Ubah
@@ -55,7 +66,10 @@
                                 <i class="fa fa-trash"></i>Hapus
                             </a>
                         </th>
-                        <?php } ?>
+
+                        <?php 
+                            } 
+                        ?>
                         
                         <td><?php echo $row->nama_mahasiswa; ?></td>
                         <td><?php echo $row->nim; ?></td>
@@ -73,7 +87,9 @@
                         <td colspan="5" class="text-center">Tidak Ada Data.</td>
                     </tr>
 
-                    <?php } ?>
+                    <?php 
+                        } 
+                    ?>
                 </tbody>
 
             </table>
